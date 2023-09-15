@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://drt5a2jbg8325"]
+
+[ext_resource type="Script" path="res://Scripts/Entrance.cs" id="1_7dxyo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4q2mr"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_7dxyo")
+
+[node name="UI" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Label" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -13.0
+offset_right = 48.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Hello Godot."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_4q2mr")
+skeleton = NodePath("")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." groups=["Light"]]
+transform = Transform3D(1, 0, 0, 0, 0.604919, 0.796287, 0, -0.796287, 0.604919, -0.833858, 5.21814, 3.66242)
